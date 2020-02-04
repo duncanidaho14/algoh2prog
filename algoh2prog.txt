@@ -1,0 +1,144 @@
+function Test
+    grand: Booleen
+    message: [youpi, aie, Ouille]
+début
+    grand = vrai
+    Milo avance
+    SI grand = vrai && Milo touche []
+        alors Milo rétrécit && affiche message aie
+
+        SINON SI grand = false && Milo touche []
+            Milo crie Ouille
+    grand = false
+    message aie
+    milo tourne gauche
+    milo avance
+    SI Milo rencontre tête 
+        grand = vrai && affiche Youpi
+    grand = vrai
+    affiche youpi
+    milo tourne à gauche
+    milo avance
+    grand = false
+    message aie
+    milo tourne à droite
+    milo crie Ouille
+    milo tourne à gauche
+    milo avance
+fin
+
+---------------------------------------------
+algo Test2
+    score = entier;
+
+début
+    score = 0;
+    
+fin
+
+------------------------------------------------------
+instruction selon exercices
+
+exercice 1 :
+
+algo algoSelon1
+    
+    mois: entier
+
+début
+    saisir mois;
+    selon mois
+        cas 1: afficher "janvier"
+        cas 2: afficher "février"
+        cas 3: afficher "mars"
+        cas 4: afficher "avril"
+        cas 5: afficher "mai"
+        cas 6: afficher "juin"
+        cas 7: afficher "juillet"
+        cas 8: afficher "aout"
+        cas 9: afficher "septembre"
+        cas 10: afficher "octobre"
+        cas 11: afficher "novembre"
+        cas 12: afficher "décembre"
+        autrement: afficher "ce mois n'existe pas"
+    finselon
+fin
+
+
+-----------------------------------------------------
+instruction selon exercice 2
+
+exercice 2
+
+algo algoSelon2
+
+    jour: entier
+
+début
+    saisir jour;
+    selon jour
+        cas 1: afficher "lundi"
+        cas 2: afficher "mardi"
+        cas 3: afficher "mercredi"
+        cas 4: afficher "jeudi"
+        cas 5: afficher "vendredi"
+        cas 6: afficher "samedi"
+        cas 7: afficher "dimanche"
+        autrement: afficher "ce jour n'existe pas"
+    finselon
+fin
+
+---------------------------------------------------------
+les boucles
+
+2 façons:
+    -   Si nous connaissons le nombre de fois ou Milo doit avancer,
+            -   Littéralement il faudrait dire : avancer de 4 cases
+            -   On pourrait utiliser la boucle POUR qui va permettre d'effectuer la même action X fois
+    
+    -   Si nous ne connaissons pas le nombre de fois ou Milo doit avancer,
+            -   Littéralement il faudrait dire : avancer tant que Milo n'a pas atteint le drapeau
+            -   On utilisera la boucle Tant Que (ouf faire/tant que) qui va permettre de réaliser uen action tant qu'une condition n'est pas atteinte.
+
+exercice 1
+
+algo algoPour1
+    cpt =  entier
+début
+    POUR cpt ALLANT DE 1 à 3 PAR PAS DE 1 FAIRE
+        avancer
+        tourner à droite
+        avancer
+        tourner à gauche
+    FINPOUR
+    avancer
+fin
+
+exercice 2 :
+avancer *3
+tourner gauche
+avancer *3
+tourner gauche
+avancer*3
+
+algoPour2
+    cpt = entier
+début
+    POUR cpt ALLANT DE 1 à 3 PAR PAS DE 1 FAIRE
+        avancer*3
+        tourner à gauche
+    FINPOUR
+fin
+// ammene à ci-dessous
+algoPour2
+    cpt = entier
+    i = entier
+début
+    POUR cpt ALLANT DE 1 à 3 PAR PAS DE 1 FAIRE
+        POUR i ALLANT DE 1 à 3 PAR PAS DE 1 FAIRE
+            avancer
+        FINPOUR
+        tournergauche
+    FINPOUR
+fin
+
