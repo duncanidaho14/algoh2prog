@@ -134,6 +134,8 @@ algoPour2
     cpt = entier
     i = entier
 début
+    cpt = 1
+    i = 1
     POUR cpt ALLANT DE 1 à 3 PAR PAS DE 1 FAIRE
         POUR i ALLANT DE 1 à 3 PAR PAS DE 1 FAIRE
             avancer
@@ -142,3 +144,57 @@ début
     FINPOUR
 fin
 
+exercice 3:
+algoPour3
+    cpt = entier
+début
+    cpt = 1;
+    POUR cpt ALLANT DE 1 à 10 PAR PAS DE 1 FAIRE
+        afficher (cpt * 2)
+    FINPOUR
+fin
+
+exercice 4 :
+algoPour4
+    resultat = entier
+    chiffreSaisi = entier
+début
+    saisir = chiffreSaisi
+    resultat = 1
+    POUR cpt ALLANT DE 1 A chiffreSaisi PAR PAS DE 1 FAIRE
+        resultat = (resultat * cpt)
+    FINPOUR
+    Afficher resultat
+fin
+
+---------------------------------------------------------------
+
+la boucle tant que
+
+exercice 1:
+algoTantQue1
+    cpt = entier
+début
+    TANTQUE cpt <= 3 FAIRE
+        cpt ++
+    FINTANTQUE
+    Afficher cpt
+fin
+
+exercice 1 :
+algoTantQue1
+    chiffreSaisi = entier
+    cpt = entier
+début
+    cpt = 1
+    resultat = 1
+
+    TANTQUE resultat < 1000
+        resultat = resultat * cpt
+        cpt = cpt + 1
+    FINTANTQUE
+    Afficher (resultat)
+fin
+
+exercice 2:
+algoTantQue2
